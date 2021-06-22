@@ -1,0 +1,7 @@
+.vscode
+.gitignore
+/k8s/
+comandos_deploy.txt
+LICENSE
+README.md
+/venv/
