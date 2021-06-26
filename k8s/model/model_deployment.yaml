@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: model
+  template:
+    metadata:
+      labels:
+        app: model
+    spec:
+      containers:
+        - name: model
+          image: vrcunha/deploy-ml-model
+          ports:
+          - containerPort: 8501
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: model-service
+spec:
+  selector:
+    app: model
+  ports:
+    - port: 8501
+      targetPort: 8501
+      nodePort: 30000
+  type: LoadBalancer 
