@@ -38,7 +38,7 @@ Para o deploy:
 
 > Em cloud(Digital Ocean):
 
-Link: Medium
+Link: em Breve
 
 ## License
 
