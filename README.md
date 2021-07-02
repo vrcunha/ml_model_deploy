@@ -38,7 +38,30 @@ Para o deploy:
 
 > Em cloud(Digital Ocean):
 
-Link: em Breve
+- Crie seu cluster na plataforma digital ocean.
+- Em seguida faça o download do arquivo config. 
+- Acesse o arquivo .kube/config dentro da sua home
+- Substitua o conteúdo deste arquivo pelo conteúdo do arquivo config da Digital Ocean.
+- Assim você já teria acesso total ao seu cluster na cloud.
+- Em seguida aplique o manifesto de deploy com o comando a seguir:
+
+`$ kubectl -f apply seu_PATH/k8s/model/model_deployment.yaml`
+
+- Pronto. Agora para checar o seu IP externo utilize o comando:
+
+`$ kubectl get all`
+
+> Em cloud(GCP):
+
+- Crie seu cluster na Google Cloud Plataform.
+- Acesse o shell do GCP e faça o upload do seu arquivo de manifesto para a plataforma.
+- Em seguida aplique o manifesto com o comando a seguir:
+
+`$ kubectl -f apply model_deployment.yaml`
+
+- Pronto. Agora para checar o seu IP externo utilize o comando:
+
+`$ kubectl get all`
 
 ## License
 
